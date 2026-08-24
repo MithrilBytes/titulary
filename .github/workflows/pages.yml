@@ -32,6 +32,9 @@ jobs:
           sed -i "s#src=\"main.js\"#src=\"main.js?v=$v\"#" site/index.html
           sed -i "s#./titulary.esm.js#./titulary.esm.js?v=$v#" site/main.js
       - uses: actions/configure-pages@v5
+        with:
+          # Provision the Pages site on first run instead of failing.
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
