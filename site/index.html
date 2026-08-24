@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Titulary</title>
+<meta name="description" content="Placeholder peers for the ceremonially inclined: seeded, impeccably formatted nonsense titles, generated in your browser.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='14' y='14' width='72' height='72' rx='12' fill='%23a4801f'/%3E%3Ccircle cx='50' cy='50' r='16' fill='%23fdf6e3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+
+<div class="layout">
+  <aside class="side">
+    <h1>Titulary</h1>
+    <p>
+      Every peer on this page is nonsense, generated in your browser.
+      The grammar is always correct; only the contents are absurd.
+      The URL carries the seed: same seed, same peer, same cupboards.
+    </p>
+    <p>
+      Sibling of
+      <a href="https://github.com/MithrilBytes/theorem-ipsum">theorem-ipsum</a>.
+    </p>
+    <label class="seed-label" for="seed">seed</label>
+    <input id="seed" type="text" spellcheck="false" autocomplete="off" aria-label="Seed">
+    <button id="randomize">regenerate</button>
+    <button id="copy" class="secondary">copy</button>
+    <div class="selects">
+      <label for="tradition">tradition</label>
+      <select id="tradition" aria-label="Tradition">
+        <option value="british" selected>british</option>
+        <option value="hre">holy roman empire</option>
+        <option value="byzantine">byzantine</option>
+        <option value="iberian">iberian</option>
+        <option value="italian">italian</option>
+        <option value="ottoman">ottoman</option>
+        <option value="papal">papal</option>
+        <option value="mixed">mixed</option>
+      </select>
+      <label for="gender">gender</label>
+      <select id="gender" aria-label="Gender">
+        <option value="random" selected>random</option>
+        <option value="m">m</option>
+        <option value="f">f</option>
+        <option value="n">n</option>
+      </select>
+      <label for="kind">kind</label>
+      <select id="kind" aria-label="Kind">
+        <option value="title" selected>title</option>
+        <option value="name">name</option>
+        <option value="epithet">epithet</option>
+        <option value="honours">honours</option>
+        <option value="address">address</option>
+        <option value="proclamation">proclamation</option>
+        <option value="blazon">blazon</option>
+        <option value="motto">motto</option>
+        <option value="court">court</option>
+      </select>
+      <label for="format">format</label>
+      <select id="format" aria-label="Format">
+        <option value="html" selected>html</option>
+        <option value="text">text</option>
+        <option value="markdown">markdown</option>
+        <option value="json">json</option>
+      </select>
+    </div>
+    <div class="dials">
+      <div class="dial">
+        <label for="ridiculous">ridiculous <span class="dial-value" data-value="ridiculous">0.50</span></label>
+        <input id="ridiculous" type="range" min="0" max="1" step="0.05" value="0.5" aria-label="Ridiculousness">
+        <div class="dial-ends"><span>peerage guide</span><span>broom cupboard</span></div>
+      </div>
+      <div class="dial">
+        <label for="length">length <span class="dial-value" data-value="length">0.50</span></label>
+        <input id="length" type="range" min="0" max="1" step="0.05" value="0.5" aria-label="Length">
+        <div class="dial-ends"><span>one line</span><span>proclamation</span></div>
+      </div>
+      <div class="dial">
+        <label for="antiquity">antiquity <span class="dial-value" data-value="antiquity">0.50</span></label>
+        <input id="antiquity" type="range" min="0" max="1" step="0.05" value="0.5" aria-label="Antiquity">
+        <div class="dial-ends"><span>Rt Hon.</span><span>Dei Gratia</span></div>
+      </div>
+      <div class="dial">
+        <label for="pretension">pretension <span class="dial-value" data-value="pretension">0.50</span></label>
+        <input id="pretension" type="range" min="0" max="1" step="0.05" value="0.5" aria-label="Pretension">
+        <div class="dial-ends"><span>every title held</span><span>every title claimed</span></div>
+      </div>
+    </div>
+    <p class="install">
+      <a href="https://github.com/MithrilBytes/titulary">github.com/MithrilBytes/titulary</a>
+    </p>
+  </aside>
+
+  <main class="sheet-wrap">
+    <div id="peer" class="sheet"></div>
+    <noscript><p class="noscript">Titulary needs JavaScript; the peer is generated in your browser.</p></noscript>
+  </main>
+</div>
+
+</body>
+</html>

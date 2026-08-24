@@ -368,10 +368,15 @@ export interface Segments {
 }
 
 export function nameText(t: Titulary): string {
-  const parts = [t.person.given.join(" ")];
-  if (t.person.regnal) parts.push(t.person.regnal);
-  if (t.person.epithet) parts.push(t.person.epithet);
-  return parts.join(" ");
+  let name = t.person.given.join(" ");
+  if (t.person.regnal) name += ` ${t.person.regnal}`;
+  if (t.person.epithet) {
+    // "the Tenth of That Name, the Fully Reimbursed" wants the comma;
+    // "Adelheid IV the Unready" does not.
+    const comma = t.person.regnal?.startsWith("the ") ? "," : "";
+    name += `${comma} ${t.person.epithet}`;
+  }
+  return name;
 }
 
 export function titleBody(title: Title, gender: Gender): string {

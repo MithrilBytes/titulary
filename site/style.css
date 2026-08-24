@@ -1,0 +1,278 @@
+/* Titulary demo styles: a court circular pinned beside its controls. */
+
+:root {
+  --ink: #2b2418;
+  --faint: #7a6f58;
+  --paper: #fdf6e3;
+  --sheet: #fffdf5;
+  --edge: #e2d6b8;
+  --gold: #a4801f;
+  --wall: #efe6cd;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--wall);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+/* ------------------------------------------------------------------ */
+/* Sidebar                                                             */
+/* ------------------------------------------------------------------ */
+
+.side {
+  background: var(--paper);
+  border-right: 1px solid var(--edge);
+  padding: 1.6rem 1.4rem 2rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.side h1 {
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.6rem;
+  color: var(--gold);
+}
+
+.side p {
+  font-size: 0.85rem;
+  color: var(--faint);
+  margin: 0 0 0.9rem;
+}
+
+.side a { color: var(--gold); }
+
+.seed-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--faint);
+  margin-bottom: 0.25rem;
+}
+
+#seed {
+  width: 100%;
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--edge);
+  border-radius: 4px;
+  background: var(--sheet);
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+button {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  background: var(--gold);
+  color: var(--sheet);
+  cursor: pointer;
+  margin: 0 0.4rem 0.9rem 0;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--gold);
+}
+
+button:hover { filter: brightness(1.08); }
+
+.selects {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 0.6rem;
+  align-items: center;
+  margin-bottom: 1.1rem;
+}
+
+.selects label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--faint);
+}
+
+.selects select {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.35rem;
+  border: 1px solid var(--edge);
+  border-radius: 4px;
+  background: var(--sheet);
+  color: var(--ink);
+  width: 100%;
+}
+
+.dials { margin-bottom: 1rem; }
+
+.dial { margin-bottom: 0.8rem; }
+
+.dial label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--ink);
+}
+
+.dial-value { color: var(--faint); font-variant-numeric: tabular-nums; }
+
+.dial input[type="range"] {
+  width: 100%;
+  accent-color: var(--gold);
+}
+
+.dial-ends {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--faint);
+  font-style: italic;
+}
+
+.install { font-size: 0.75rem; word-break: break-all; }
+
+/* ------------------------------------------------------------------ */
+/* The sheet                                                           */
+/* ------------------------------------------------------------------ */
+
+.sheet-wrap {
+  padding: 2.2rem clamp(1rem, 4vw, 3.5rem);
+}
+
+.sheet {
+  background: var(--sheet);
+  border: 1px solid var(--edge);
+  border-radius: 6px;
+  box-shadow: 0 1px 8px rgba(60, 45, 10, 0.08);
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: clamp(1.4rem, 4vw, 3rem);
+  min-height: 12rem;
+}
+
+.sheet.mono pre {
+  font-family: "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.noscript { color: var(--faint); font-style: italic; }
+
+/* Generated HTML */
+
+.titulary h1 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 0.8rem;
+  line-height: 1.35;
+}
+
+.titulary .formulas {
+  font-style: italic;
+  color: var(--faint);
+  margin: 0 0 0.8rem;
+}
+
+.titulary ol.titles {
+  margin: 0 0 1rem;
+  padding-left: 1.6rem;
+}
+
+.titulary ul.offices,
+.titulary ul.protective,
+.titulary ul.honours {
+  margin: 0 0 1rem;
+  padding-left: 1.6rem;
+  list-style: none;
+}
+
+.titulary ul.offices li::before,
+.titulary ul.protective li::before {
+  content: "· ";
+  color: var(--gold);
+}
+
+.titulary ul.honours li::before {
+  content: "✦ ";
+  color: var(--gold);
+}
+
+.titulary li { margin-bottom: 0.15rem; }
+
+.postnominal {
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+}
+
+.titulary .motto {
+  font-style: italic;
+  text-align: center;
+  margin: 1.2rem 0 0.3rem;
+}
+
+.titulary .etc {
+  text-align: center;
+  color: var(--faint);
+  margin: 0.4rem 0 0;
+}
+
+.proclamation p { margin: 0 0 1rem; text-align: justify; }
+
+.proclamation .dateline { font-style: italic; text-align: right; }
+
+.court h2 {
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  font-size: 1.1rem;
+  margin: 0 0 0.8rem;
+}
+
+.court ol.precedence { padding-left: 1.6rem; margin: 0; }
+
+.court li { margin-bottom: 0.6rem; }
+
+dl.address dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--faint);
+  margin-top: 0.7rem;
+}
+
+dl.address dd { margin: 0.15rem 0 0; }
+
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; }
+  .side {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--edge);
+  }
+  .sheet-wrap { padding: 1.2rem; }
+}
