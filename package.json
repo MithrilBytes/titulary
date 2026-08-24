@@ -1,0 +1,51 @@
+{
+  "name": "titulary",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Placeholder peers for the ceremonially inclined: seeded, impeccably formatted nonsense titles, styles, and forms of address.",
+  "type": "module",
+  "license": "MIT",
+  "author": "MithrilBytes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MithrilBytes/titulary.git"
+  },
+  "homepage": "https://mithrilbytes.github.io/titulary/",
+  "keywords": [
+    "lorem-ipsum",
+    "placeholder",
+    "peerage",
+    "nobility",
+    "heraldry",
+    "generator",
+    "parody"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "titulary": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "build:site": "esbuild src/index.ts --bundle --format=esm --minify --outfile=site/titulary.esm.js",
+    "dev": "esbuild src/index.ts --bundle --format=esm --outfile=site/titulary.esm.js --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "snapshots": "UPDATE_GOLDENS=1 vitest run test/golden.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

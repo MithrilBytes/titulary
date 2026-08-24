@@ -1,0 +1,5 @@
+node_modules/
+dist/
+site/titulary.esm.js
+*.log
+.DS_Store
