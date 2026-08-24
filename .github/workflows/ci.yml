@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm run build:site
+
+  cli-runs-on-oldest-node:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Generate every kind in every format
+        run: |
+          for kind in title name epithet honours address proclamation blazon motto court; do
+            for format in text markdown html json; do
+              node dist/cli.js --seed "ci-$kind" -k "$kind" -f "$format" > /dev/null
+            done
+          done
+          node dist/cli.js --seed 42 --ridiculous 1 --length 1
+          node dist/cli.js -k court -n 12 --pretension 0.8 --tradition mixed
