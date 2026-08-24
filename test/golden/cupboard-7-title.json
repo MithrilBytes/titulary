@@ -1,0 +1,255 @@
+{
+  "seed": "cupboard-7",
+  "tradition": "british",
+  "gender": "m",
+  "dials": {
+    "ridiculous": 0.5,
+    "length": 0.5,
+    "antiquity": 0.5,
+    "pretension": 0.5
+  },
+  "person": {
+    "given": [
+      "Godwine"
+    ],
+    "epithet": "the Great",
+    "house": "Harrowfield-Isewick"
+  },
+  "style": [
+    "His",
+    "Grace"
+  ],
+  "formulas": [],
+  "primary": {
+    "rank": {
+      "key": "duke",
+      "forms": {
+        "m": "Duke",
+        "f": "Duchess",
+        "n": "Duke"
+      },
+      "precedence": 70,
+      "sovereign": false,
+      "style": "grace",
+      "particles": [
+        "of"
+      ],
+      "traditions": [
+        "british"
+      ]
+    },
+    "particle": "of",
+    "territory": "Marlingford",
+    "status": "titular"
+  },
+  "subsidiary": [
+    {
+      "rank": {
+        "key": "marquess",
+        "forms": {
+          "m": "Marquess",
+          "f": "Marchioness",
+          "n": "Marquess"
+        },
+        "precedence": 60,
+        "sovereign": false,
+        "style": "most-hon",
+        "particles": [
+          "of"
+        ],
+        "traditions": [
+          "british"
+        ]
+      },
+      "particle": "of",
+      "territory": "Greyhurst",
+      "status": "held"
+    },
+    {
+      "rank": {
+        "key": "earl",
+        "forms": {
+          "m": "Earl",
+          "f": "Countess",
+          "n": "Earl"
+        },
+        "precedence": 50,
+        "sovereign": false,
+        "style": "rt-hon",
+        "particles": [
+          "of"
+        ],
+        "traditions": [
+          "british"
+        ]
+      },
+      "particle": "of",
+      "territory": "the Greater Boot Room",
+      "status": "claimed"
+    },
+    {
+      "rank": {
+        "key": "viscount",
+        "forms": {
+          "m": "Viscount",
+          "f": "Viscountess",
+          "n": "Viscount"
+        },
+        "precedence": 40,
+        "sovereign": false,
+        "style": "rt-hon",
+        "particles": [
+          "of"
+        ],
+        "traditions": [
+          "british"
+        ]
+      },
+      "particle": "of",
+      "territory": "the Lesser Egg Cup",
+      "status": "in-pretence"
+    },
+    {
+      "rank": {
+        "key": "baron",
+        "forms": {
+          "m": "Baron",
+          "f": "Baroness",
+          "n": "Baron"
+        },
+        "precedence": 30,
+        "sovereign": false,
+        "style": "rt-hon",
+        "particles": [
+          "of"
+        ],
+        "traditions": [
+          "british"
+        ]
+      },
+      "particle": "of",
+      "territory": "Nether Dunsmere",
+      "status": "held"
+    },
+    {
+      "rank": {
+        "key": "baronet",
+        "forms": {
+          "m": "Baronet",
+          "f": "Baronetess",
+          "n": "Baronet"
+        },
+        "precedence": 20,
+        "sovereign": false,
+        "style": "none",
+        "particles": [
+          "of"
+        ],
+        "traditions": [
+          "british"
+        ]
+      },
+      "particle": "of",
+      "territory": "Lower Wexcombe",
+      "status": "claimed"
+    },
+    {
+      "rank": {
+        "key": "laird",
+        "forms": {
+          "m": "Laird",
+          "f": "Lady",
+          "n": "Laird"
+        },
+        "precedence": 10,
+        "sovereign": false,
+        "style": "much-honoured",
+        "particles": [
+          "of"
+        ],
+        "traditions": [
+          "british"
+        ]
+      },
+      "particle": "of",
+      "territory": "Schleswig-Netherleigh-Caldberg",
+      "status": "titular"
+    },
+    {
+      "rank": {
+        "key": "lord-of-the-manor",
+        "forms": {
+          "m": "Lord of the Manor",
+          "f": "Lady of the Manor",
+          "n": "Lord of the Manor"
+        },
+        "precedence": 5,
+        "sovereign": false,
+        "style": "none",
+        "particles": [
+          "of"
+        ],
+        "traditions": [
+          "british"
+        ]
+      },
+      "particle": "of",
+      "territory": "Ravensmere",
+      "status": "in-pretence"
+    }
+  ],
+  "offices": [
+    {
+      "name": "Warden of the Marches",
+      "hereditary": false
+    },
+    {
+      "name": "Lord High Admiral",
+      "hereditary": false
+    },
+    {
+      "name": "Under-Falconer",
+      "hereditary": false,
+      "to": "the Margravial Mews"
+    },
+    {
+      "name": "Grand Master of the Hunt (Suspended)",
+      "hereditary": false
+    }
+  ],
+  "protective": [],
+  "honours": [
+    {
+      "order": "the Falcon of Hohenfelsen",
+      "grade": "Companion",
+      "postNominal": "CFH",
+      "precedence": 80,
+      "tier": 1
+    },
+    {
+      "order": "the Damp",
+      "grade": "Companion with Collar and Receipt",
+      "postNominal": "CD",
+      "precedence": 70,
+      "tier": 2
+    },
+    {
+      "order": "the Cross of Merit",
+      "grade": "",
+      "postNominal": "CM",
+      "precedence": 50,
+      "tier": 0
+    }
+  ],
+  "motto": {
+    "text": "Post Prandium Nihil",
+    "language": "la"
+  },
+  "etc": false,
+  "blazon": "Sable, a chevron Or",
+  "address": {
+    "envelope": "His Grace the Duke of Marlingford",
+    "salutation": "May it please Your Grace",
+    "verbal": "Your Grace"
+  }
+}

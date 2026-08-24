@@ -1,0 +1,3 @@
+Envelope:   Æthelred Hautmont, Lord of the Manor of Brackenholm
+Salutation: Dear Lord of the Manor
+Verbal:     Æthelred

@@ -1,0 +1,3 @@
+Envelope:   Æthelstan Ravensmere-Nordorf, Lord of the Manor of the Two Aldbournes
+Salutation: Dear Lord of the Manor
+Verbal:     Æthelstan
