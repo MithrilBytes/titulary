@@ -16,7 +16,10 @@ export const METALS = ["Or", "Argent"] as const;
 export const COLOURS = ["Gules", "Azure", "Vert", "Sable", "Purpure"] as const;
 export const TINCTURES = [...METALS, ...COLOURS] as const;
 
-const ORDINARIES = ["fess", "chevron", "bend", "pale", "cross", "saltire", "chief"] as const;
+export const ORDINARIES = [
+  "fess", "chevron", "bend", "pale", "cross", "saltire", "chief",
+  "bar", "bend sinister", "pile", "orle", "quarter", "gyron",
+] as const;
 
 interface ChargeRow {
   noun: string;
@@ -25,7 +28,7 @@ interface ChargeRow {
   properChance?: number;
 }
 
-const CHARGES: { t0: readonly ChargeRow[]; t1: readonly ChargeRow[]; t2: readonly ChargeRow[] } = {
+export const CHARGES: { t0: readonly ChargeRow[]; t1: readonly ChargeRow[]; t2: readonly ChargeRow[] } = {
   t0: [
     { noun: "lion", attitude: "rampant" },
     { noun: "eagle", attitude: "displayed" },
@@ -35,6 +38,18 @@ const CHARGES: { t0: readonly ChargeRow[]; t1: readonly ChargeRow[]; t2: readonl
     { noun: "martlet" },
     { noun: "escallop" },
     { noun: "boar's head", attitude: "erased" },
+    { noun: "annulet" },
+    { noun: "bezant" },
+    { noun: "cinquefoil" },
+    { noun: "fleur-de-lis" },
+    { noun: "lozenge" },
+    { noun: "roundel" },
+    { noun: "estoile" },
+    { noun: "garb" },
+    { noun: "portcullis" },
+    { noun: "talbot", attitude: "passant" },
+    { noun: "wyvern", attitude: "erect" },
+    { noun: "crescent" },
   ],
   t1: [
     { noun: "heron", attitude: "close" },
@@ -42,6 +57,18 @@ const CHARGES: { t0: readonly ChargeRow[]; t1: readonly ChargeRow[]; t2: readonl
     { noun: "oak sprig", attitude: "fructed" },
     { noun: "tower", attitude: "embattled" },
     { noun: "hedgehog", attitude: "statant" },
+    { noun: "heron", attitude: "volant" },
+    { noun: "marten", attitude: "courant" },
+    { noun: "beehive", attitude: "beset with bees" },
+    { noun: "oak leaf", attitude: "slipped" },
+    { noun: "salmon", attitude: "naiant" },
+    { noun: "spur", attitude: "rowelled" },
+    { noun: "lymphad" },
+    { noun: "hart", attitude: "lodged" },
+    { noun: "crane", attitude: "in its vigilance" },
+    { noun: "fox", attitude: "statant" },
+    { noun: "otter", attitude: "passant" },
+    { noun: "sunburst" },
   ],
   t2: [
     { noun: "spoon", attitude: "in bend", properChance: 0.3 },
@@ -50,6 +77,35 @@ const CHARGES: { t0: readonly ChargeRow[]; t1: readonly ChargeRow[]; t2: readonl
     { noun: "tea cosy", properChance: 0.6 },
     { noun: "draught excluder", attitude: "fesswise", properChance: 0.5 },
     { noun: "thermostat", properChance: 0.4 },
+    { noun: "colander", attitude: "pierced", properChance: 0.5 },
+    { noun: "whisk", attitude: "palewise", properChance: 0.4 },
+    { noun: "rolling pin", attitude: "fesswise", properChance: 0.5 },
+    { noun: "gravy boat", attitude: "naiant", properChance: 0.6 },
+    { noun: "egg timer", properChance: 0.9 },
+    { noun: "oven glove", attitude: "appaumé", properChance: 0.5 },
+    { noun: "ladle", attitude: "in pale", properChance: 0.4 },
+    { noun: "trivet", properChance: 0.6 },
+    { noun: "kettle", properChance: 0.5 },
+    { noun: "watering can", attitude: "bendwise", properChance: 0.5 },
+    { noun: "garden gnome", attitude: "statant", properChance: 0.8 },
+    { noun: "deckchair", attitude: "unfolded", properChance: 0.8 },
+    { noun: "mop bucket", properChance: 0.6 },
+    { noun: "bulldog clip", attitude: "palewise", properChance: 0.3 },
+    { noun: "paperclip", attitude: "embowed", properChance: 0.3 },
+    { noun: "rubber glove", attitude: "pendent", properChance: 0.4 },
+    { noun: "drawing pin", properChance: 0.4 },
+    { noun: "thimble", properChance: 0.6 },
+    { noun: "button", properChance: 0.5 },
+    { noun: "odd sock", attitude: "pendent", properChance: 0.5 },
+    { noun: "clothes peg", attitude: "palewise", properChance: 0.4 },
+    { noun: "doily", attitude: "pierced", properChance: 0.8 },
+    { noun: "toast rack", properChance: 0.6 },
+    { noun: "butter dish", attitude: "covered", properChance: 0.6 },
+    { noun: "egg cup", attitude: "covered", properChance: 0.5 },
+    { noun: "spare key", attitude: "in saltire", properChance: 0.4 },
+    { noun: "banister", attitude: "couped", properChance: 0.3 },
+    { noun: "radiator key", attitude: "palewise", properChance: 0.3 },
+    { noun: "tea towel", attitude: "pendent", properChance: 0.5 },
   ],
 };
 

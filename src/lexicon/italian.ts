@@ -1,7 +1,8 @@
 /**
  * The Italian states. The Doge is a head of state who never took a
  * regnal number, hence sovereign but unnumbered; "Patrician of Venice"
- * is a fixed dignity with no fief of its own.
+ * is a fixed dignity with no fief of its own, and a Signore held a city
+ * the way the signorie actually did.
  */
 import type { Rank } from "../types.js";
 import type { TraditionDef } from "./index.js";
@@ -29,6 +30,10 @@ const ladder: readonly Rank[] = [
   {
     key: "conte", forms: { m: "Conte", f: "Contessa", n: "Conte" },
     precedence: 50, sovereign: false, style: "most-illustrious", particles: ["di", "dei"], traditions: T,
+  },
+  {
+    key: "signore", forms: { m: "Signore", f: "Signora", n: "Signore" },
+    precedence: 45, sovereign: false, style: "none", particles: ["di"], traditions: T,
   },
   {
     key: "visconte", forms: { m: "Visconte", f: "Viscontessa", n: "Visconte" },
@@ -60,10 +65,14 @@ export const italian: TraditionDef = {
     m: [
       "Cosimo", "Ludovico", "Galeazzo", "Ottaviano", "Ercole", "Sigismondo",
       "Pandolfo", "Astorre", "Bonifazio", "Tancredi", "Uguccione", "Malatesta",
+      "Guidobaldo", "Ridolfo", "Cangrande", "Obizzo", "Azzo", "Taddeo",
+      "Gherardo", "Lapo", "Neri", "Corso", "Farinata", "Brunetto",
     ],
     f: [
       "Lucrezia", "Bianca", "Ginevra", "Isotta", "Costanza", "Caterina",
       "Violante", "Fiammetta", "Sveva", "Ippolita", "Parisina", "Semiramide",
+      "Selvaggia", "Contessina", "Nannina", "Alfonsina", "Diamante",
+      "Smeralda", "Tessa", "Piccarda", "Gemma", "Lagia", "Cilia", "Vannozza",
     ],
   },
 };

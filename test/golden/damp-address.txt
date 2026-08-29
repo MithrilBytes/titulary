@@ -1,3 +1,3 @@
-Envelope:   The Right Honourable the Countess of Nether Doilies
+Envelope:   The Right Honourable the Baroness of the Damp Marches
 Salutation: My Lady
-Verbal:     Lady Doily
+Verbal:     Lady Damp Marches

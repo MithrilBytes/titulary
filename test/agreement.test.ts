@@ -20,6 +20,7 @@ const TRIPLES: Triple[] = [
   { m: "KG", f: "LG", n: "KG" },
   { m: "KA", f: "LA", n: "KA" },
   { m: "KStH", f: "DStH", n: "KStH" },
+  { m: "KDr", f: "DDr", n: "KDr" },
   { m: "Porphyrogennetos", f: "Porphyrogennete", n: "Porphyrogennetos" },
 ];
 

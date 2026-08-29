@@ -1,6 +1,8 @@
 /**
  * The British ladder. Precedence follows the order of precedence as
- * Debrett's gives it; the numbers are our own shared scale.
+ * Debrett's gives it; the numbers are our own shared scale. Thanes,
+ * Chiefs of the Name, and Lords Proprietor are the real obscure corners
+ * of the same system, and Proprietrix is the genuine feminine.
  */
 import type { Rank } from "../types.js";
 import type { TraditionDef } from "./index.js";
@@ -50,12 +52,26 @@ const ladder: readonly Rank[] = [
     precedence: 30, sovereign: false, style: "rt-hon", particles: ["of"], traditions: T,
   },
   {
+    key: "lord-proprietor",
+    forms: { m: "Lord Proprietor", f: "Lady Proprietrix", n: "Lord Proprietor" },
+    precedence: 28, sovereign: false, style: "none", particles: ["of"], traditions: T,
+  },
+  {
+    key: "chief-of-the-name",
+    forms: { m: "Chief of the Name", f: "Chief of the Name", n: "Chief of the Name" },
+    precedence: 25, sovereign: false, style: "much-honoured", particles: ["of"], traditions: T,
+  },
+  {
     key: "baronet", forms: { m: "Baronet", f: "Baronetess", n: "Baronet" },
     precedence: 20, sovereign: false, style: "none", particles: ["of"], traditions: T,
   },
   {
     key: "knight", forms: { m: "Knight", f: "Dame", n: "Knight" },
     precedence: 15, sovereign: false, style: "none", particles: ["of"], traditions: T,
+  },
+  {
+    key: "thane", forms: { m: "Thane", f: "Thane", n: "Thane" },
+    precedence: 12, sovereign: false, style: "much-honoured", particles: ["of"], traditions: T,
   },
   {
     key: "laird", forms: { m: "Laird", f: "Lady", n: "Laird" },
@@ -83,11 +99,16 @@ export const british: TraditionDef = {
       "Æthelred", "Æthelstan", "Eadric", "Godwine", "Leofric", "Osric",
       "Wulfstan", "Cuthbert", "Dunstan", "Aldhelm", "Bertram", "Roderick",
       "Peregrine", "Ranulf", "Aylmer", "Crispin",
+      "Oswine", "Eadwulf", "Beorhtric", "Sigeric", "Hereward", "Æthelwold",
+      "Ceolwulf", "Ordgar", "Wigstan", "Ealdred", "Torhtmund", "Byrhtnoth",
     ],
     f: [
       "Æthelburga", "Eadgyth", "Wulfrun", "Godgifu", "Mildryth", "Rowena",
       "Isolde", "Berengaria", "Aldith", "Ermengarde", "Clotilda",
       "Petronilla", "Osburh", "Sexburga", "Wynflæd", "Everild",
+      "Eadburh", "Cyneburh", "Leofgifu", "Wulfhild", "Ælfthryth",
+      "Eormenhild", "Cwenburh", "Osgyth", "Hereswith", "Æbbe",
+      "Frideswide", "Tova",
     ],
   },
 };

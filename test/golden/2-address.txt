@@ -1,3 +1,3 @@
-Envelope:   Eadgyth Wexburg-Thornbury, Lady of the Manor of Dunberg
+Envelope:   Wulfrun Yarstein-Fernycroft, Lady of the Manor of Grimsett
 Salutation: Dear Lady of the Manor
-Verbal:     Eadgyth
+Verbal:     Wulfrun

@@ -1,3 +1,3 @@
-Envelope:   Æthelred Hautmont, Lord of the Manor of Brackenholm
+Envelope:   Æthelred Malassis-Boisjoli, Lord of the Manor of Netherleigh
 Salutation: Dear Lord of the Manor
 Verbal:     Æthelred

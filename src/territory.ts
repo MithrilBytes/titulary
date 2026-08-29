@@ -15,7 +15,14 @@ import {
 /** Dynastic prefixes for over-egged compounds. */
 const DYNASTIC = ["Saxe", "Hesse", "Schleswig"] as const;
 
-const WRAPPERS = ["Palatinate", "Marches", "March", "Vale", "Meadows", "Walls"];
+// Hundreds, sokes, wapentakes, liberties, and ridings are all real
+// English administrative fossils, which is why they carry cupboards so
+// well.
+const WRAPPERS = [
+  "Palatinate", "Marches", "March", "Vale", "Meadows", "Walls",
+  "Hundred", "Hundreds", "Soke", "Wapentake", "Liberty", "Chase",
+  "Warren", "Riding",
+];
 
 function stem(rng: Rng, flavor: StemFlavor): string {
   // English honors keep a few Norman names, as the real peerage does.
@@ -58,6 +65,9 @@ export function generateTerritory(rng: Rng, r: number, length: number, flavor: S
       () => `the Two ${pluralize(s1)}`,
       () => `the Upper and Nether Marches`,
       () => `${rng.pick(TERRITORY_PREFIXES)} ${s1} and the ${rng.pick(WRAPPERS)} of ${s2}`,
+      () => `${s1}-cum-${s2}`,
+      () => `${s1}-juxta-${s2}`,
+      () => `the Honour of ${s1}`,
     ];
     return rng.pick(patterns)();
   }
@@ -73,6 +83,14 @@ export function generateTerritory(rng: Rng, r: number, length: number, flavor: S
     () => `the Damp Marches`,
     () => `the Airing-Cupboard Palatinate`,
     () => `the Outer ${m}`,
+    () => `${m} Regis`,
+    () => `${m} Parva`,
+    () => `${m} Magna`,
+    () => `the Soke of the ${m}`,
+    () => `the Wapentake of the ${m}`,
+    () => `the Liberty of the ${m}`,
+    () => `the ${m} Hundreds`,
+    () => `the Rural District of the ${m}`,
   ];
   return rng.pick(patterns)();
 }
@@ -105,7 +123,8 @@ export function houseName(rng: Rng, def: TraditionDef, length: number): string {
 const SHORT_STOPWORDS = new Set<string>([
   ...TERRITORY_PREFIXES, ...DYNASTIC, ...WRAPPERS,
   "the", "and", "of", "de", "los", "la", "le", "les", "d'Ombra", "Two", "Damp",
-  "sur", "under", "the-Walls",
+  "sur", "under", "the-Walls", "aux", "del", "der", "di", "el",
+  "Regis", "Parva", "Magna", "cum", "juxta", "Honour", "Rural", "District",
 ]);
 
 function singularize(word: string): string {

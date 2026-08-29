@@ -1,7 +1,8 @@
 /**
  * Iberia: grandees, infantes, and the long double-barrelled surname.
  * Grandees really are addressed as Most Excellent; marquesses down to
- * viscounts as Most Illustrious.
+ * viscounts as Most Illustrious. The Adelantado governed the frontier,
+ * and Ricahembra is the genuine feminine of Ricohombre.
  */
 import type { Rank } from "../types.js";
 import type { TraditionDef } from "./index.js";
@@ -30,6 +31,10 @@ const ladder: readonly Rank[] = [
     precedence: 60, sovereign: false, style: "most-illustrious", particles: ["de"], traditions: T,
   },
   {
+    key: "adelantado", forms: { m: "Adelantado", f: "Adelantada", n: "Adelantado" },
+    precedence: 55, sovereign: false, style: "most-illustrious", particles: ["de"], traditions: T,
+  },
+  {
     key: "count", forms: { m: "Count", f: "Countess", n: "Count" },
     precedence: 50, sovereign: false, style: "most-illustrious", particles: ["de"], traditions: T,
   },
@@ -38,17 +43,22 @@ const ladder: readonly Rank[] = [
     precedence: 40, sovereign: false, style: "most-illustrious", particles: ["de"], traditions: T,
   },
   {
-    key: "baron", forms: { m: "Baron", f: "Baroness", n: "Baron" },
-    precedence: 30, sovereign: false, style: "none", particles: ["de"], traditions: T,
+    key: "ricohombre", forms: { m: "Ricohombre", f: "Ricahembra", n: "Ricohombre" },
+    precedence: 35, sovereign: false, style: "none", territorial: false,
+    particles: ["de"], traditions: T,
   },
   {
-    key: "senor", forms: { m: "Señor", f: "Señora", n: "Señor" },
-    precedence: 5, sovereign: false, style: "none", particles: ["de"], traditions: T,
+    key: "baron", forms: { m: "Baron", f: "Baroness", n: "Baron" },
+    precedence: 30, sovereign: false, style: "none", particles: ["de"], traditions: T,
   },
   {
     key: "hidalgo", forms: { m: "Hidalgo", f: "Hidalga", n: "Hidalgo" },
     precedence: 8, sovereign: false, style: "none", territorial: false,
     particles: ["de"], traditions: T,
+  },
+  {
+    key: "senor", forms: { m: "Señor", f: "Señora", n: "Señor" },
+    precedence: 5, sovereign: false, style: "none", particles: ["de"], traditions: T,
   },
 ];
 
@@ -62,10 +72,15 @@ export const iberian: TraditionDef = {
     m: [
       "Sancho", "Alfonso", "Ordoño", "Ramiro", "Bermudo", "García",
       "Fruela", "Nuño", "Rodrigo", "Vermudo", "Gonzalo", "Suero",
+      "Wamba", "Chindasuinth", "Sisebut", "Egica", "Wittiza", "Pelayo",
+      "Favila", "Silo", "Mauregato", "Galindo", "Íñigo", "Ansur",
     ],
     f: [
       "Urraca", "Berenguela", "Sancha", "Elvira", "Jimena", "Teresa",
       "Constanza", "Blanca", "Aldonza", "Mencía", "Violante", "Mayor",
+      "Goswintha", "Egilona", "Adosinda", "Munia", "Toda", "Oneca",
+      "Fronilde", "Gontroda", "Velasquita", "Argentea", "Muniadona",
+      "Gelvira",
     ],
   },
 };

@@ -1,6 +1,8 @@
 /**
  * The Holy Roman Empire: electors, prince-bishops, and hyphenated houses.
  * German sovereign dukes kept regnal numbers, so dukes are sovereign here.
+ * Wildgraves, Rhinegraves, Raugraves, and Altgraves were all real, which
+ * is the best thing about the Empire.
  */
 import type { Rank } from "../types.js";
 import type { TraditionDef } from "./index.js";
@@ -11,6 +13,12 @@ const ladder: readonly Rank[] = [
   {
     key: "emperor", forms: { m: "Emperor", f: "Empress", n: "Sovereign" },
     precedence: 100, sovereign: true, style: "imperial-majesty", particles: ["of"], traditions: T,
+  },
+  {
+    key: "king-of-the-romans",
+    forms: { m: "King of the Romans", f: "Queen of the Romans", n: "Monarch of the Romans" },
+    precedence: 92, sovereign: true, style: "majesty", territorial: false,
+    particles: ["of"], traditions: T,
   },
   {
     key: "elector", forms: { m: "Elector", f: "Electress", n: "Elector" },
@@ -43,6 +51,14 @@ const ladder: readonly Rank[] = [
     precedence: 63, sovereign: false, style: "serene-highness", particles: ["of", "von"], traditions: T,
   },
   {
+    key: "wildgrave", forms: { m: "Wildgrave", f: "Wildgravine", n: "Wildgrave" },
+    precedence: 58, sovereign: false, style: "illustrious-highness", particles: ["von", "zu"], traditions: T,
+  },
+  {
+    key: "rhinegrave", forms: { m: "Rhinegrave", f: "Rhinegravine", n: "Rhinegrave" },
+    precedence: 57, sovereign: false, style: "illustrious-highness", particles: ["von", "zu"], traditions: T,
+  },
+  {
     key: "imperial-count",
     forms: { m: "Imperial Count", f: "Imperial Countess", n: "Imperial Count" },
     precedence: 50, sovereign: false, style: "illustrious-highness",
@@ -51,6 +67,14 @@ const ladder: readonly Rank[] = [
   {
     key: "burgrave", forms: { m: "Burgrave", f: "Burgravine", n: "Burgrave" },
     precedence: 45, sovereign: false, style: "none", particles: ["von", "zu"], traditions: T,
+  },
+  {
+    key: "raugrave", forms: { m: "Raugrave", f: "Raugravine", n: "Raugrave" },
+    precedence: 44, sovereign: false, style: "none", particles: ["von", "zu"], traditions: T,
+  },
+  {
+    key: "altgrave", forms: { m: "Altgrave", f: "Altgravine", n: "Altgrave" },
+    precedence: 43, sovereign: false, style: "none", particles: ["von", "zu"], traditions: T,
   },
   {
     key: "freiherr", forms: { m: "Baron", f: "Baroness", n: "Baron" },
@@ -75,11 +99,16 @@ export const hre: TraditionDef = {
       "Otto-Friedrich", "Sigismund", "Wenceslaus", "Balthasar", "Ludwig-Ernst",
       "Heinrich", "Albrecht", "Gottfried", "Adolphus", "Ferdinand-Karl",
       "Leopold-Anton", "Johann-Nepomuk", "Wolfram", "Berthold",
+      "Eberhard", "Burkhard", "Pankraz", "Veit", "Ottokar", "Meinhard",
+      "Reinald", "Dagobert", "Hartmann", "Willigis", "Korbinian",
+      "Anselm-Kasimir",
     ],
     f: [
       "Adelheid", "Wilhelmina", "Kunigunde", "Theodelinde", "Amalia-Sophie",
       "Charlotte-Luise", "Brunhilde", "Mechtild", "Walburga", "Ottilie",
       "Friederike", "Hedwig", "Adelgunde", "Sieglinde",
+      "Richardis", "Uta", "Gisela", "Liutgard", "Oda", "Reglindis",
+      "Irmingard", "Adelinde", "Wiltrud", "Waldrada", "Imma", "Hemma",
     ],
   },
 };

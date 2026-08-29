@@ -231,7 +231,10 @@ function drawTitle(
   }
   const flavor = defFor(rank.traditions[0] ?? fallback).stemFlavor;
   const territory = uniqueTerritory(rng, r, length, flavor, used);
-  const particle = rng.pick(rank.particles);
+  // "von" and its cousins govern bare names, never an English article:
+  // "Margravine zu Eichenwald" but "Margravine of the Lesser Cupboard".
+  const drawn = rng.pick(rank.particles);
+  const particle = territory.startsWith("the ") && drawn !== "of" ? "of" : drawn;
   return { rank, particle, territory, status: "held" };
 }
 
@@ -385,13 +388,15 @@ export function titleBody(title: Title, gender: Gender): string {
   return `${form} ${title.particle} ${title.territory}`;
 }
 
+// "In abeyance" and "sub judice" are the genuine legal registers for a
+// peerage in limbo, which is what makes them fit.
 const STATUS_POST: Partial<Record<TitleStatus, readonly string[]>> = {
-  claimed: ["(claimed)", "(by courtesy)"],
+  claimed: ["(claimed)", "(by courtesy)", "(claim lodged)"],
   "in-pretence": ["(in pretence)"],
-  disputed: ["(disputed)", "(subject to appeal)"],
+  disputed: ["(disputed)", "(subject to appeal)", "(sub judice)"],
   "in-exile": ["(in exile)"],
-  dormant: ["(dormant)"],
-  vacant: ["(vacant; claimed)"],
+  dormant: ["(dormant)", "(in abeyance)"],
+  vacant: ["(vacant; claimed)", "(vacant; contested)"],
 };
 
 export function renderTitle(title: Title, gender: Gender): RenderedTitle {

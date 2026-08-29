@@ -10,27 +10,28 @@
   },
   "person": {
     "given": [
-      "Godwine"
+      "Wulfstan"
     ],
-    "epithet": "the Great",
-    "house": "Harrowfield-Isewick"
+    "epithet": "the Just",
+    "house": "Mickleover Green-Thornstadt"
   },
   "style": [
-    "His",
-    "Grace"
+    "The",
+    "Most",
+    "Honourable"
   ],
   "formulas": [],
   "primary": {
     "rank": {
-      "key": "duke",
+      "key": "marquess",
       "forms": {
-        "m": "Duke",
-        "f": "Duchess",
-        "n": "Duke"
+        "m": "Marquess",
+        "f": "Marchioness",
+        "n": "Marquess"
       },
-      "precedence": 70,
+      "precedence": 60,
       "sovereign": false,
-      "style": "grace",
+      "style": "most-hon",
       "particles": [
         "of"
       ],
@@ -39,32 +40,10 @@
       ]
     },
     "particle": "of",
-    "territory": "Marlingford",
+    "territory": "Snodbury",
     "status": "titular"
   },
   "subsidiary": [
-    {
-      "rank": {
-        "key": "marquess",
-        "forms": {
-          "m": "Marquess",
-          "f": "Marchioness",
-          "n": "Marquess"
-        },
-        "precedence": 60,
-        "sovereign": false,
-        "style": "most-hon",
-        "particles": [
-          "of"
-        ],
-        "traditions": [
-          "british"
-        ]
-      },
-      "particle": "of",
-      "territory": "Greyhurst",
-      "status": "held"
-    },
     {
       "rank": {
         "key": "earl",
@@ -84,8 +63,8 @@
         ]
       },
       "particle": "of",
-      "territory": "the Greater Boot Room",
-      "status": "claimed"
+      "territory": "Quernmouth",
+      "status": "held"
     },
     {
       "rank": {
@@ -106,8 +85,8 @@
         ]
       },
       "particle": "of",
-      "territory": "the Lesser Egg Cup",
-      "status": "in-pretence"
+      "territory": "the Lower Tablecloth",
+      "status": "claimed"
     },
     {
       "rank": {
@@ -128,18 +107,18 @@
         ]
       },
       "particle": "of",
-      "territory": "Nether Dunsmere",
-      "status": "held"
+      "territory": "the Greater Water Butt",
+      "status": "in-pretence"
     },
     {
       "rank": {
-        "key": "baronet",
+        "key": "lord-proprietor",
         "forms": {
-          "m": "Baronet",
-          "f": "Baronetess",
-          "n": "Baronet"
+          "m": "Lord Proprietor",
+          "f": "Lady Proprietrix",
+          "n": "Lord Proprietor"
         },
-        "precedence": 20,
+        "precedence": 28,
         "sovereign": false,
         "style": "none",
         "particles": [
@@ -150,7 +129,29 @@
         ]
       },
       "particle": "of",
-      "territory": "Lower Wexcombe",
+      "territory": "Outer Doverow",
+      "status": "held"
+    },
+    {
+      "rank": {
+        "key": "chief-of-the-name",
+        "forms": {
+          "m": "Chief of the Name",
+          "f": "Chief of the Name",
+          "n": "Chief of the Name"
+        },
+        "precedence": 25,
+        "sovereign": false,
+        "style": "much-honoured",
+        "particles": [
+          "of"
+        ],
+        "traditions": [
+          "british"
+        ]
+      },
+      "particle": "of",
+      "territory": "Greater Calderwick",
       "status": "claimed"
     },
     {
@@ -172,7 +173,7 @@
         ]
       },
       "particle": "of",
-      "territory": "Schleswig-Netherleigh-Caldberg",
+      "territory": "Schleswig-Emberwick-Falworth",
       "status": "titular"
     },
     {
@@ -194,62 +195,61 @@
         ]
       },
       "particle": "of",
-      "territory": "Ravensmere",
+      "territory": "Thornbury",
       "status": "in-pretence"
     }
   ],
   "offices": [
     {
-      "name": "Warden of the Marches",
+      "name": "Master of the Great Wardrobe",
       "hereditary": false
     },
     {
-      "name": "Lord High Admiral",
+      "name": "Chief Butler",
+      "hereditary": true
+    },
+    {
+      "name": "Master of the Pigeon Post",
       "hereditary": false
     },
     {
-      "name": "Under-Falconer",
-      "hereditary": false,
-      "to": "the Margravial Mews"
-    },
-    {
-      "name": "Grand Master of the Hunt (Suspended)",
-      "hereditary": false
+      "name": "Warden of the Eel Weirs",
+      "hereditary": true
     }
   ],
   "protective": [],
   "honours": [
     {
-      "order": "the Falcon of Hohenfelsen",
+      "order": "the Silver Bough",
       "grade": "Companion",
-      "postNominal": "CFH",
-      "precedence": 80,
+      "postNominal": "CSB",
+      "precedence": 65,
       "tier": 1
     },
     {
-      "order": "the Damp",
-      "grade": "Companion with Collar and Receipt",
-      "postNominal": "CD",
-      "precedence": 70,
+      "order": "the Filing Cabinet",
+      "grade": "Companion with Both Keys",
+      "postNominal": "CFC",
+      "precedence": 57,
       "tier": 2
     },
     {
-      "order": "the Cross of Merit",
+      "order": "the Medal for Zeal",
       "grade": "",
-      "postNominal": "CM",
+      "postNominal": "MZ",
       "precedence": 50,
       "tier": 0
     }
   ],
   "motto": {
-    "text": "Post Prandium Nihil",
-    "language": "la"
+    "text": "Cogito Ergo Cupboard",
+    "language": "mixed"
   },
   "etc": false,
-  "blazon": "Sable, a chevron Or",
+  "blazon": "Sable, a bend Or",
   "address": {
-    "envelope": "His Grace the Duke of Marlingford",
-    "salutation": "May it please Your Grace",
-    "verbal": "Your Grace"
+    "envelope": "The Most Honourable the Marquess of Snodbury",
+    "salutation": "My Lord Marquess",
+    "verbal": "Lord Snodbury"
   }
 }
