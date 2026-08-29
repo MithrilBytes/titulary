@@ -18,6 +18,12 @@ precedence, post-nominals stand in the right order. At `--ridiculous 0` an
 output could sit in a peerage guide unremarked; at `--ridiculous 1` it is
 indistinguishable from a real entry in form only.
 
+The tiered lexicon runs past 1,800 entries: 290 epithets, 212 offices,
+101 orders of chivalry, 92 ranks across seven traditions (Wildgraves,
+Kouropalatissai, Adelantados, Beylerbeys, and Princes-Provost included),
+and the rest in place stems, mottoes, formulas, decorations, and blazon
+charges. Tests hold every entry to the house rules.
+
 Not published to npm; clone and build locally.
 
 ## CLI
